@@ -64,8 +64,9 @@ def caminho(x,y,matrix,spath,tam,m,f1,f2):
         if caminho(x,y+1,matrix, spath,tam,m,f1,f2) == True: 
             return True
           
-        # Retira passos que não estão na solução. 
-        spath[x][y] = 0
+        # Retira passos que não estão na solução. MARCA com -1 para mostrar por onde
+        #solução tentou achar a solução.
+        spath[x][y] = -1
         return False
 x=input("Digitar o tamanho do labirinto")
          
