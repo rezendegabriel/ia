@@ -2,7 +2,7 @@
 import numpy as np
 import random
 
-class matrix:
+class matrix: # tad matrix para gerar e guardar a matriz do problema.
     def __init__(self,tam):
         self.matriz = np.zeros((tam,tam), dtype=np.float64) #inicializa matriz com zero
         self.k=tam
@@ -19,7 +19,7 @@ class matrix:
         self.fim=(i,j)
 
     
-def passo(x,y,matrix,tam):
+def passo(x,y,matrix,tam):  # verifica se o passo é válido
     if(x>=0 and x<tam and y>=0 and y<tam and matrix[x][y]==1):
         return True
     else:
